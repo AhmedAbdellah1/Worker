@@ -1,0 +1,1673 @@
+{
+	"info": {
+		"_postman_id": "f4c4597e-edb4-4e5b-9f93-916a59aa0a1b",
+		"name": "worker course",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12281947"
+	},
+	"item": [
+		{
+			"name": "admin auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ahmed Abdellah Nour Eldin\",\r\n    \"email\":\"ahmed.abdellah664@gmail.com\",\r\n    \"password\":\"456456456\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/admin/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"email\":\"ahmed.abdellah664@gmail.com\",\r\n    \"password\":\"456456456\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/admin/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTY4NDIyNDksImV4cCI6MTY5Njg0NTg0OSwibmJmIjoxNjk2ODQyMjQ5LCJqdGkiOiJMWERMRm1ydzdVMkVGUFFGIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.XOPFErTj8Jvwg2ogV2RRxDziCDQo7IW_Dkr0td8N-UA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/admin/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"admin",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTY0ODQ0NTQsImV4cCI6MTY5NjQ4ODA1NCwibmJmIjoxNjk2NDg0NDU0LCJqdGkiOiJ2TExETWhvaldnYmxEVkRoIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.ND67XoYpELLr1NbIsxrGmL8u2JxdCVm7xAG0-b8KpdU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/admin/refresh",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"admin",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTY4MzY5OTcsImV4cCI6MTY5Njg0MDU5NywibmJmIjoxNjk2ODM2OTk3LCJqdGkiOiJEbUlBeUVnME5HMDFLNjRwIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.lU1MipqxdXVGdEV8aaIo8kxnMn6GUAIjk4BVVwd7MGg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/admin/user-profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"admin",
+								"user-profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "worker auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Ahmed Abdellah1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ahmed.abdellah664@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1141371812",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/E:/Abdellah/صوري/القلعة/DSC_0520.JPG"
+								},
+								{
+									"key": "location",
+									"value": "Alexandrea ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/worker/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"worker",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ahmed.abdellah664@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/worker/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"worker",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvd29ya2VyL2xvZ2luIiwiaWF0IjoxNjk2NDg0NjcyLCJleHAiOjE2OTY0ODgyNzIsIm5iZiI6MTY5NjQ4NDY3MiwianRpIjoiaXcxMDZ4QmxyQjQ0NUQxbiIsInN1YiI6IjEiLCJwcnYiOiIxNWExMmUwN2U1Yzg2YTgyM2VjNTA4MjZlYjJjOWUxZGE2MGQ3NmZkIn0.7PPf0CCrFjlBIB4nrrJFgwjfThU1Wfsf5hfASOVJakw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/worker/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"worker",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvd29ya2VyL2xvZ2luIiwiaWF0IjoxNjk2NzU3OTMzLCJleHAiOjE2OTY3NjE1MzMsIm5iZiI6MTY5Njc1NzkzMywianRpIjoieTNnWjdzZWJ3MW95N2JIRiIsInN1YiI6IjEiLCJwcnYiOiIxNWExMmUwN2U1Yzg2YTgyM2VjNTA4MjZlYjJjOWUxZGE2MGQ3NmZkIn0.EUe5O23qV8mwKEtZvTcJnUhLINteRJDXNh1Eg3s64Os",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/worker/refresh",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"worker",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/worker/verify/b86f6d3e5e6716a6238b03590af9b503",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"worker",
+								"verify",
+								"b86f6d3e5e6716a6238b03590af9b503"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "client auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "first client",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "firstClient@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "654654654",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/E:/Abdellah/صوري/القلعة/DSC_0345.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/client/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"client",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "firstClient@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "654654654",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/client/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"client",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvY2xpZW50L2xvZ2luIiwiaWF0IjoxNjk2MzIyMTEwLCJleHAiOjE2OTYzMjU3MTAsIm5iZiI6MTY5NjMyMjExMCwianRpIjoiMXpFbmdCdW1JdTd2Zll1cCIsInN1YiI6IjEiLCJwcnYiOiI0MWVmYjdiYWQ3ZjZmNjMyZTI0MDViZDNhNzkzYjhhNmJkZWM2Nzc3In0.e_xIajxxbZzXYJBCvsWqD1r7qAUI7_6eVGY2MxSzxMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/client/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"client",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvY2xpZW50L2xvZ2luIiwiaWF0IjoxNjk2MzIyMTEwLCJleHAiOjE2OTYzMjU3MTAsIm5iZiI6MTY5NjMyMjExMCwianRpIjoiMXpFbmdCdW1JdTd2Zll1cCIsInN1YiI6IjEiLCJwcnYiOiI0MWVmYjdiYWQ3ZjZmNjMyZTI0MDViZDNhNzkzYjhhNmJkZWM2Nzc3In0.e_xIajxxbZzXYJBCvsWqD1r7qAUI7_6eVGY2MxSzxMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/client/refresh",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"client",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvY2xpZW50L2xvZ2luIiwiaWF0IjoxNjk2MzIyMTEwLCJleHAiOjE2OTYzMjU3MTAsIm5iZiI6MTY5NjMyMjExMCwianRpIjoiMXpFbmdCdW1JdTd2Zll1cCIsInN1YiI6IjEiLCJwcnYiOiI0MWVmYjdiYWQ3ZjZmNjMyZTI0MDViZDNhNzkzYjhhNmJkZWM2Nzc3In0.e_xIajxxbZzXYJBCvsWqD1r7qAUI7_6eVGY2MxSzxMg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/auth/client/user-profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"client",
+								"user-profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "add-post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvd29ya2VyL2xvZ2luIiwiaWF0IjoxNjk3MzYwNTUyLCJleHAiOjE2OTczNjQxNTIsIm5iZiI6MTY5NzM2MDU1MiwianRpIjoiQ1A2YWtnOGFsbXdXQlloRiIsInN1YiI6IjIiLCJwcnYiOiIxNWExMmUwN2U1Yzg2YTgyM2VjNTA4MjZlYjJjOWUxZGE2MGQ3NmZkIn0.w3_3zGv38dJaxBjO7k0py6jWuQJ1qYayDAgnPWTPCjA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "learn French's js in three hours ",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "850",
+									"type": "text"
+								},
+								{
+									"key": "photos",
+									"type": "file",
+									"src": "/E:/Abdellah/صوري/القلعة/DSC_0347.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/worker/post/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"post",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin-change-status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTcxMjY3MjksImV4cCI6MTY5NzEzMDMyOSwibmJmIjoxNjk3MTI2NzI5LCJqdGkiOiJ0ZEl1RlZWcE5Vb1VPcnRnIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.0-vKyKisW3rq7zXEPkE6d90LQIfU12cGHWTBaFUT8iE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "approved",
+									"type": "text"
+								},
+								{
+									"key": "rejected_reason",
+									"value": "this post not fact",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/admin/post/status",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"post",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTczNjAxNTAsImV4cCI6MTY5NzM2Mzc1MCwibmJmIjoxNjk3MzYwMTUwLCJqdGkiOiJ3VEJZZDJaS1lnWDN4aVoxIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.y3qb6un_O96o0d5sURbkqJhzssDpxo2xt2GtuekIPj8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/worker/post/all_posts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"post",
+								"all_posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show-post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTczNjAxNTAsImV4cCI6MTY5NzM2Mzc1MCwibmJmIjoxNjk3MzYwMTUwLCJqdGkiOiJ3VEJZZDJaS1lnWDN4aVoxIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.y3qb6un_O96o0d5sURbkqJhzssDpxo2xt2GtuekIPj8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/worker/post/show/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"post",
+								"show",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-posts-approved",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvd29ya2VyL2xvZ2luIiwiaWF0IjoxNjk3MzYwNTUyLCJleHAiOjE2OTczNjQxNTIsIm5iZiI6MTY5NzM2MDU1MiwianRpIjoiQ1A2YWtnOGFsbXdXQlloRiIsInN1YiI6IjIiLCJwcnYiOiIxNWExMmUwN2U1Yzg2YTgyM2VjNTA4MjZlYjJjOWUxZGE2MGQ3NmZkIn0.w3_3zGv38dJaxBjO7k0py6jWuQJ1qYayDAgnPWTPCjA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/worker/post/approved?filter[item]=",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"post",
+								"approved"
+							],
+							"query": [
+								{
+									"key": "filter[content]",
+									"value": "Fr",
+									"disabled": true
+								},
+								{
+									"key": "filter[price]",
+									"value": "807.50",
+									"disabled": true
+								},
+								{
+									"key": "filter[item]",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "worker-review",
+			"item": [
+				{
+					"name": "add-review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvY2xpZW50L2xvZ2luIiwiaWF0IjoxNjk3MzczOTQyLCJleHAiOjE2OTczNzc1NDIsIm5iZiI6MTY5NzM3Mzk0MiwianRpIjoiR0NkOGthRmlDaXEyNnJkdCIsInN1YiI6IjEiLCJwcnYiOiI0MWVmYjdiYWQ3ZjZmNjMyZTI0MDViZDNhNzkzYjhhNmJkZWM2Nzc3In0.ZfnS2EZtXOw7Zxo1fchFFySi3hQdd5Gz6uTNIp3y_6A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "very good",
+									"type": "text"
+								},
+								{
+									"key": "rate",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/worker/review",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-review",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTcxMjcyMTIsImV4cCI6MTY5NzEzMDgxMiwibmJmIjoxNjk3MTI3MjEyLCJqdGkiOiI4UEI0bGhoQVFPc0J1Uk5lIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.EfOBXhfm-dFGZle2awBeubXwaguNO0Zm1v7FA8Dyq0s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/worker/post/show/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"post",
+								"show",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "client-order",
+			"item": [
+				{
+					"name": "request-order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvY2xpZW50L2xvZ2luIiwiaWF0IjoxNjk3MTI3MzQwLCJleHAiOjE2OTcxMzA5NDAsIm5iZiI6MTY5NzEyNzM0MCwianRpIjoiN2ViOTZLaG1mUVFjcEg5aiIsInN1YiI6IjEiLCJwcnYiOiI0MWVmYjdiYWQ3ZjZmNjMyZTI0MDViZDNhNzkzYjhhNmJkZWM2Nzc3In0.hHeLr27MaCkHZaMhc0g529GIxjv8rTfL7iYHJbYKOPU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_id\":1\r\n\r\n\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/client/order/request",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"client",
+								"order",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "worker-orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvd29ya2VyL2xvZ2luIiwiaWF0IjoxNjk3MTI3NDAyLCJleHAiOjE2OTcxMzEwMDIsIm5iZiI6MTY5NzEyNzQwMiwianRpIjoicGdHZjhSSHdyRGgxN2lHeCIsInN1YiI6IjEiLCJwcnYiOiIxNWExMmUwN2U1Yzg2YTgyM2VjNTA4MjZlYjJjOWUxZGE2MGQ3NmZkIn0.AK9x5zKrtrpC1IbRDnBbSfDH-eKkVc-bJ8860nMpUYI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/worker/pending/orders",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"pending",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "worker",
+			"item": [
+				{
+					"name": "update-order-status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvd29ya2VyL2xvZ2luIiwiaWF0IjoxNjk3MTI3NDAyLCJleHAiOjE2OTcxMzEwMDIsIm5iZiI6MTY5NzEyNzQwMiwianRpIjoicGdHZjhSSHdyRGgxN2lHeCIsInN1YiI6IjEiLCJwcnYiOiIxNWExMmUwN2U1Yzg2YTgyM2VjNTA4MjZlYjJjOWUxZGE2MGQ3NmZkIn0.AK9x5zKrtrpC1IbRDnBbSfDH-eKkVc-bJ8860nMpUYI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"accepted\" \r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/worker/update/order/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"update",
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "worker-profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvd29ya2VyL2xvZ2luIiwiaWF0IjoxNjk3MzkxOTU5LCJleHAiOjE2OTczOTU1NTksIm5iZiI6MTY5NzM5MTk1OSwianRpIjoiV2d4RGR2cDJMam04QVBWRiIsInN1YiI6IjEiLCJwcnYiOiIxNWExMmUwN2U1Yzg2YTgyM2VjNTA4MjZlYjJjOWUxZGE2MGQ3NmZkIn0.Nvy63Zh81l5A9ZeOMduaFAjEHtSlKqORdrD1j9kKQ-w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/worker/profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show-profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvd29ya2VyL2xvZ2luIiwiaWF0IjoxNjk3Mzk1MTUzLCJleHAiOjE2OTczOTg3NTMsIm5iZiI6MTY5NzM5NTE1MywianRpIjoiY3NjUXd0eWdQM3hYd25tSSIsInN1YiI6IjEiLCJwcnYiOiIxNWExMmUwN2U1Yzg2YTgyM2VjNTA4MjZlYjJjOWUxZGE2MGQ3NmZkIn0.vfGu4YEKRljmLTGsNSH63Cn6TpmpycAIygtUrshpZJA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/worker/profile/edit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"profile",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "export-file",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvd29ya2VyL2xvZ2luIiwiaWF0IjoxNjk3NDQ0MTMzLCJleHAiOjE2OTc0NDc3MzMsIm5iZiI6MTY5NzQ0NDEzMywianRpIjoiNXpseGcwRFFnVWg3ZGYwayIsInN1YiI6IjEiLCJwcnYiOiIxNWExMmUwN2U1Yzg2YTgyM2VjNTA4MjZlYjJjOWUxZGE2MGQ3NmZkIn0.i6Yaj81TkR9J3lhj-0XfI_Nf2NuYg3grCRo_UeYd7qs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/worker/export",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"export"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "import-file",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "excelFile",
+									"type": "file",
+									"src": "/C:/Users/Ahmed Abdellah/Downloads/Worker (1).xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/worker/import",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"import"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvd29ya2VyL2xvZ2luIiwiaWF0IjoxNjk3Mzk3MjIzLCJleHAiOjE2OTc0MDA4MjMsIm5iZiI6MTY5NzM5NzIyMywianRpIjoib3g3QlJXTmtmOWlJMXl6aCIsInN1YiI6IjEiLCJwcnYiOiIxNWExMmUwN2U1Yzg2YTgyM2VjNTA4MjZlYjJjOWUxZGE2MGQ3NmZkIn0.RZFZBwvBpQU5blnwOLgfUseH-UaKZIPfVqv-PNr7s6g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Ahmed Abdellah1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ahmed.abdellah664@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password ",
+									"value": "123147123",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "41371812",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/E:/Abdellah/صوري/القلعة/DSC_0378.JPG"
+								},
+								{
+									"key": "location",
+									"value": "sohag",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/worker/profile/update",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"profile",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvd29ya2VyL2xvZ2luIiwiaWF0IjoxNjk3NDM5NDczLCJleHAiOjE2OTc0NDMwNzMsIm5iZiI6MTY5NzQzOTQ3MywianRpIjoiUU1yb2U2OW1oaXpVSVNJdCIsInN1YiI6IjIiLCJwcnYiOiIxNWExMmUwN2U1Yzg2YTgyM2VjNTA4MjZlYjJjOWUxZGE2MGQ3NmZkIn0.snPg9dnzgShFQMOLpwtUlZVNABQWNy8tNZHkUr-aJKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/worker/profile/posts/delete",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"worker",
+								"profile",
+								"posts",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin-notification",
+			"item": [
+				{
+					"name": "all-notification",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTY5NjIzNDIsImV4cCI6MTY5Njk2NTk0MiwibmJmIjoxNjk2OTYyMzQyLCJqdGkiOiJLbTB1Wkdhbm1iY0g3NnFFIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.ZDhu7G4e9ZEopIsnSrNpghnB0H4DsStrSskq7-ItBNM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/admin/notification/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"notification",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unread-notification",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTY5NjIzNDIsImV4cCI6MTY5Njk2NTk0MiwibmJmIjoxNjk2OTYyMzQyLCJqdGkiOiJLbTB1Wkdhbm1iY0g3NnFFIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.ZDhu7G4e9ZEopIsnSrNpghnB0H4DsStrSskq7-ItBNM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/admin/notification/unread",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"notification",
+								"unread"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "readAll-notification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTY5NjIzNDIsImV4cCI6MTY5Njk2NTk0MiwibmJmIjoxNjk2OTYyMzQyLCJqdGkiOiJLbTB1Wkdhbm1iY0g3NnFFIiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.ZDhu7G4e9ZEopIsnSrNpghnB0H4DsStrSskq7-ItBNM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/admin/notification/markReadAll",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"notification",
+								"markReadAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAll-notification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTY4NDI1NjksImV4cCI6MTY5Njg0NjE2OSwibmJmIjoxNjk2ODQyNTY5LCJqdGkiOiJqNmZBcGsycmpoQzRLdGp2Iiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.mJpXgZxxaXKpmUIwChMpRtmPplqLYjE0ofIofXIaw34",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/admin/notification/deleteAll",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"notification",
+								"deleteAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOne-notification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvYWRtaW4vbG9naW4iLCJpYXQiOjE2OTY4NDI1NjksImV4cCI6MTY5Njg0NjE2OSwibmJmIjoxNjk2ODQyNTY5LCJqdGkiOiJqNmZBcGsycmpoQzRLdGp2Iiwic3ViIjoiMSIsInBydiI6ImRmODgzZGI5N2JkMDVlZjhmZjg1MDgyZDY4NmM0NWU4MzJlNTkzYTkifQ.mJpXgZxxaXKpmUIwChMpRtmPplqLYjE0ofIofXIaw34",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}/api/admin/notification/delete/ac7736a1-5af3-4c05-9560-d50a6b035c77",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"notification",
+								"delete",
+								"ac7736a1-5af3-4c05-9560-d50a6b035c77"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
