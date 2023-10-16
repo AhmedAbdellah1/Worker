@@ -1,24 +1,24 @@
-## Wroker
+# Wroker
 
 I developed the Worker app to make it easier for users to submit and request services efficiently.
 The application contains multiple authentication using JWT and also uses the service layer pattern concept and also uses laravel notifications.
 
 ## Features
-# Administrator (Admin): 
+### Administrator (Admin): 
 * Has the authority to approve or reject services.
 * Can provide reasons for rejecting services.
 * Can manage users and services.
 
-# Worker:
+### Worker:
 * Can create and edit services.
 * Can view requests, ratings, and comments on services.
 * Can post and interact with posts.
 
-# Client:
+### Client:
 * Can request services, rate them, and leave comments.
 * Can browse posts and comment on them.
 
-## Other features include:
+### Other features include:
 * Implementation of a multi-authentication system using JWT for security.
 * Adoption of the service layer pattern to control data operations.
 * Inclusion of email verification through a verification code.
